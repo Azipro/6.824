@@ -6,13 +6,16 @@ package main
 // go run mrsequential.go wc.so pg*.txt
 //
 
-import "fmt"
-import "6.824/mr"
-import "plugin"
-import "os"
-import "log"
-import "io/ioutil"
-import "sort"
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+	"plugin"
+	"sort"
+
+	"6.824/mr"
+)
 
 // for sorting by key.
 type ByKey []mr.KeyValue
@@ -56,7 +59,7 @@ func main() {
 	// rather than being partitioned into NxM buckets.
 	//
 
-	sort.Sort(ByKey(intermediate))
+	sort.Sort(ByKey(intermediate)) // 让相同key归类到一起，[key1:1, key1:1, key1:1, key2:1, key2:1, key3:1, ....]
 
 	oname := "mr-out-0"
 	ofile, _ := os.Create(oname)
@@ -73,7 +76,7 @@ func main() {
 		}
 		values := []string{}
 		for k := i; k < j; k++ {
-			values = append(values, intermediate[k].Value)
+			values = append(values, intermediate[k].Value) // key:[1, 1, ....]
 		}
 		output := reducef(intermediate[i].Key, values)
 

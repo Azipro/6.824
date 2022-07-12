@@ -1,0 +1,68 @@
+*** Starting wc test.
+no map tasks
+no map tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+--- wc test: PASS
+*** Starting indexer test.
+no map tasks
+no reduce tasks
+--- indexer test: PASS
+*** Starting map parallelism test.
+no map tasks
+no reduce tasks
+--- map parallelism test: PASS
+*** Starting reduce parallelism test.
+no map tasks
+no reduce tasks
+no reduce tasks
+--- reduce parallelism test: PASS
+*** Starting job count test.
+no map tasks
+no reduce tasks
+--- job count test: PASS
+*** Starting early exit test.
+no map tasks
+no map tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+--- early exit test: PASS
+*** Starting crash test.
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no map tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+no reduce tasks
+--- crash test: PASS
+*** PASSED ALL TESTS
