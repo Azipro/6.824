@@ -6,10 +6,14 @@ MIT lesson
 
 ## Source Codes
 
--   [ ] [Lab 1: MapReduce](src/mr/)
--   [ ] [Lab 2: replication for fault-tolerance using Raft](src/raft/)
--   [ ] [Lab 3: fault-tolerant key-value store](src/kvraft/)
--   [ ] [Lab 4: sharded key-value store](src/shardkv/)
+-   [√] [Lab 1: MapReduce](src/mr/)
+-   [ ] [Lab 2: Replication for fault-tolerance using Raft](src/raft/)
+    -   [√] [Lab 2A: Leader Election]
+    -   [ ] [Lab 2B: Log]
+    -   [ ] [Lab 2C: Persistence]
+    -   [ ] [Lab 2D: Log Compaction]
+-   [ ] [Lab 3: Fault-tolerant key-value store](src/kvraft/)
+-   [ ] [Lab 4: Sharded key-value store](src/shardkv/)
 
 ## Schedule: Spring 2021
 

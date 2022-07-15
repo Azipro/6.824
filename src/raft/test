@@ -1,0 +1,253 @@
+Test (2A): initial election ...
+2022/07/15 22:36:44 ---[0]--- become Candidate with term[1]
+2022/07/15 22:36:44 ---[1]--- vote for 0 at term[1]
+2022/07/15 22:36:44 ---[2]--- vote for 0 at term[1]
+2022/07/15 22:36:44 ***[0]*** receive 2 vote from all 2 at term[1]
+2022/07/15 22:36:44 ---[0]--- become Leader with term[1]
+  ... Passed --   3.0  3  110   28836    0
+2022/07/15 22:36:47 +++[1]+++ be killed
+2022/07/15 22:36:47 +++[0]+++ be killed
+2022/07/15 22:36:47 +++[2]+++ be killed
+2022/07/15 22:36:47 ^^^^^^^^^^^^Leader[0] Closed^^^^^^^^^^^^
+Test (2A): election after network failure ...
+2022/07/15 22:36:47 ---[2]--- become Candidate with term[1]
+2022/07/15 22:36:47 ---[0]--- vote for 2 at term[1]
+2022/07/15 22:36:47 ***[2]*** receive 2 vote from all 2 at term[1]
+2022/07/15 22:36:47 ---[2]--- become Leader with term[1]
+2022/07/15 22:36:47 ---[1]--- vote for 2 at term[1]
+2022/07/15 22:36:47 ---[0]--- become Candidate with term[2]
+2022/07/15 22:36:47 ---[1]--- become Candidate with term[2]
+2022/07/15 22:36:47 ```[1]``` does not vote for 0 at term[2], because candidateTerm = 2 || rf.votedFor == 1
+2022/07/15 22:36:47 ```[0]``` does not vote for 1 at term[2], because candidateTerm = 2 || rf.votedFor == 0
+2022/07/15 22:36:48 ---[0]--- become Candidate with term[3]
+2022/07/15 22:36:48 ---[1]--- become Candidate with term[3]
+2022/07/15 22:36:48 ```[1]``` does not vote for 0 at term[3], because candidateTerm = 3 || rf.votedFor == 1
+2022/07/15 22:36:48 ```[0]``` does not vote for 1 at term[3], because candidateTerm = 3 || rf.votedFor == 0
+2022/07/15 22:36:48 ---[0]--- become Candidate with term[4]
+2022/07/15 22:36:48 ---[1]--- become Candidate with term[4]
+2022/07/15 22:36:48 ```[0]``` does not vote for 1 at term[4], because candidateTerm = 4 || rf.votedFor == 0
+2022/07/15 22:36:48 ```[1]``` does not vote for 0 at term[4], because candidateTerm = 4 || rf.votedFor == 1
+2022/07/15 22:36:48 ---[1]--- become Candidate with term[5]
+2022/07/15 22:36:48 ---[0]--- become Candidate with term[5]
+2022/07/15 22:36:48 ```[0]``` does not vote for 1 at term[5], because candidateTerm = 5 || rf.votedFor == 0
+2022/07/15 22:36:48 ```[1]``` does not vote for 0 at term[5], because candidateTerm = 5 || rf.votedFor == 1
+2022/07/15 22:36:49 ---[0]--- become Candidate with term[6]
+2022/07/15 22:36:49 ---[1]--- vote for 0 at term[6]
+2022/07/15 22:36:49 ***[0]*** receive 2 vote from all 2 at term[6]
+2022/07/15 22:36:49 ---[0]--- become Leader with term[6]
+2022/07/15 22:36:49 ^^^^^^^^^^^^Leader[2] Closed^^^^^^^^^^^^
+2022/07/15 22:36:49 ---[1]--- become Candidate with term[7]
+2022/07/15 22:36:49 ---[2]--- become Candidate with term[7]
+2022/07/15 22:36:50 ---[1]--- become Candidate with term[8]
+2022/07/15 22:36:50 ---[2]--- become Candidate with term[8]
+2022/07/15 22:36:50 ---[1]--- become Candidate with term[9]
+2022/07/15 22:36:50 ---[2]--- become Candidate with term[9]
+2022/07/15 22:36:50 ---[1]--- become Candidate with term[10]
+2022/07/15 22:36:51 ---[2]--- become Candidate with term[10]
+2022/07/15 22:36:51 ---[1]--- become Candidate with term[11]
+2022/07/15 22:36:51 ---[2]--- become Candidate with term[11]
+2022/07/15 22:36:51 ---[1]--- become Candidate with term[12]
+2022/07/15 22:36:51 ---[1]--- become Candidate with term[13]
+2022/07/15 22:36:51 ---[2]--- vote for 1 at term[13]
+2022/07/15 22:36:51 ***[1]*** receive 2 vote from all 2 at term[13]
+2022/07/15 22:36:51 ---[1]--- become Leader with term[13]
+2022/07/15 22:36:52 ^^^^^^^^^^^^Leader[0] Closed^^^^^^^^^^^^
+  ... Passed --   5.5  3  274   51116    0
+2022/07/15 22:36:52 +++[0]+++ be killed
+2022/07/15 22:36:52 +++[1]+++ be killed
+2022/07/15 22:36:52 ^^^^^^^^^^^^Leader[1] Closed^^^^^^^^^^^^
+2022/07/15 22:36:52 +++[2]+++ be killed
+Test (2A): multiple elections ...
+2022/07/15 22:36:52 ---[4]--- become Candidate with term[1]
+2022/07/15 22:36:52 ---[5]--- vote for 4 at term[1]
+2022/07/15 22:36:52 ---[2]--- vote for 4 at term[1]
+2022/07/15 22:36:52 ---[1]--- vote for 4 at term[1]
+2022/07/15 22:36:52 ---[0]--- vote for 4 at term[1]
+2022/07/15 22:36:52 ***[4]*** receive 4 vote from all 4 at term[1]
+2022/07/15 22:36:52 ---[4]--- become Leader with term[1]
+2022/07/15 22:36:53 ---[3]--- vote for 4 at term[1]
+2022/07/15 22:36:53 ---[6]--- vote for 4 at term[1]
+2022/07/15 22:36:53 ---[6]--- become Candidate with term[2]
+2022/07/15 22:36:53 ---[1]--- become Candidate with term[2]
+2022/07/15 22:36:53 ---[3]--- become Candidate with term[2]
+2022/07/15 22:36:54 ---[6]--- become Candidate with term[3]
+2022/07/15 22:36:54 ---[3]--- become Candidate with term[3]
+2022/07/15 22:36:54 ---[1]--- become Candidate with term[3]
+2022/07/15 22:36:54 ---[5]--- become Candidate with term[2]
+2022/07/15 22:36:54 ```[1]``` does not vote for 3 at term[3], because candidateTerm = 3 || rf.votedFor == 1
+2022/07/15 22:36:54 ---[4]--- vote for 3 at term[3]
+2022/07/15 22:36:54 ```[4]``` does not vote for 1 at term[3], because candidateTerm = 3 || rf.votedFor == 3
+2022/07/15 22:36:54 ---[0]--- become Candidate with term[2]
+2022/07/15 22:36:54 ---[2]--- vote for 3 at term[3]
+2022/07/15 22:36:54 ^^^^^^^^^^^^Leader[4] Closed^^^^^^^^^^^^
+2022/07/15 22:36:54 ```[2]``` does not vote for 1 at term[3], because candidateTerm = 3 || rf.votedFor == 3
+2022/07/15 22:36:54 ```[3]``` does not vote for 1 at term[3], because candidateTerm = 3 || rf.votedFor == 3
+2022/07/15 22:36:54 ---[6]--- become Candidate with term[4]
+2022/07/15 22:36:54 ---[5]--- become Candidate with term[3]
+2022/07/15 22:36:54 ---[1]--- become Candidate with term[4]
+2022/07/15 22:36:54 ---[4]--- become Candidate with term[4]
+2022/07/15 22:36:54 ---[2]--- vote for 4 at term[4]
+2022/07/15 22:36:54 ```[4]``` does not vote for 1 at term[4], because candidateTerm = 4 || rf.votedFor == 4
+2022/07/15 22:36:54 ---[3]--- vote for 1 at term[4]
+2022/07/15 22:36:54 ---[2]--- become Candidate with term[5]
+2022/07/15 22:36:54 ```[1]``` does not vote for 4 at term[4], because candidateTerm = 4 || rf.votedFor == 1
+2022/07/15 22:36:54 ```[2]``` does not vote for 1 at term[5], because candidateTerm = 4 || rf.votedFor == 2
+2022/07/15 22:36:54 ---[0]--- become Candidate with term[3]
+2022/07/15 22:36:54 ---[3]--- vote for 2 at term[5]
+2022/07/15 22:36:54 ```[3]``` does not vote for 4 at term[5], because candidateTerm = 4 || rf.votedFor == 2
+2022/07/15 22:36:54 ---[1]--- vote for 2 at term[5]
+2022/07/15 22:36:54 ---[4]--- vote for 2 at term[5]
+2022/07/15 22:36:54 ***[2]*** receive 4 vote from all 4 at term[5]
+2022/07/15 22:36:54 ---[6]--- become Candidate with term[5]
+2022/07/15 22:36:54 ---[5]--- become Candidate with term[4]
+2022/07/15 22:36:54 ---[1]--- become Candidate with term[6]
+2022/07/15 22:36:54 ---[4]--- vote for 1 at term[6]
+2022/07/15 22:36:54 ---[3]--- vote for 1 at term[6]
+2022/07/15 22:36:54 ---[2]--- vote for 1 at term[6]
+2022/07/15 22:36:54 ***[1]*** receive 4 vote from all 4 at term[6]
+2022/07/15 22:36:54 ---[1]--- become Leader with term[6]
+2022/07/15 22:36:55 ---[0]--- become Candidate with term[4]
+2022/07/15 22:36:55 ---[4]--- become Candidate with term[7]
+2022/07/15 22:36:55 ---[2]--- become Candidate with term[7]
+2022/07/15 22:36:55 ---[0]--- become Candidate with term[5]
+2022/07/15 22:36:55 ---[2]--- become Candidate with term[8]
+2022/07/15 22:36:55 ---[4]--- become Candidate with term[8]
+2022/07/15 22:36:55 ```[4]``` does not vote for 2 at term[8], because candidateTerm = 8 || rf.votedFor == 4
+2022/07/15 22:36:55 ```[2]``` does not vote for 4 at term[8], because candidateTerm = 8 || rf.votedFor == 2
+2022/07/15 22:36:55 ---[1]--- vote for 2 at term[8]
+2022/07/15 22:36:55 ---[0]--- vote for 2 at term[8]
+2022/07/15 22:36:55 ```[0]``` does not vote for 4 at term[8], because candidateTerm = 8 || rf.votedFor == 2
+2022/07/15 22:36:55 ```[1]``` does not vote for 4 at term[8], because candidateTerm = 8 || rf.votedFor == 2
+2022/07/15 22:36:55 ^^^^^^^^^^^^Leader[1] Closed^^^^^^^^^^^^
+2022/07/15 22:36:55 ---[5]--- become Candidate with term[7]
+2022/07/15 22:36:55 ---[6]--- become Candidate with term[7]
+2022/07/15 22:36:55 ---[3]--- become Candidate with term[7]
+2022/07/15 22:36:56 ---[2]--- become Candidate with term[9]
+2022/07/15 22:36:56 ---[0]--- vote for 2 at term[9]
+2022/07/15 22:36:56 ---[4]--- become Candidate with term[9]
+2022/07/15 22:36:56 ```[4]``` does not vote for 2 at term[9], because candidateTerm = 9 || rf.votedFor == 4
+2022/07/15 22:36:56 ```[2]``` does not vote for 4 at term[9], because candidateTerm = 9 || rf.votedFor == 2
+2022/07/15 22:36:56 ---[1]--- vote for 4 at term[9]
+2022/07/15 22:36:56 ```[0]``` does not vote for 4 at term[9], because candidateTerm = 9 || rf.votedFor == 2
+2022/07/15 22:36:56 ```[1]``` does not vote for 2 at term[9], because candidateTerm = 9 || rf.votedFor == 4
+2022/07/15 22:36:56 ---[5]--- become Candidate with term[8]
+2022/07/15 22:36:56 ---[3]--- become Candidate with term[8]
+2022/07/15 22:36:56 ---[2]--- become Candidate with term[10]
+2022/07/15 22:36:56 ---[1]--- become Candidate with term[10]
+2022/07/15 22:36:56 ---[4]--- vote for 2 at term[10]
+2022/07/15 22:36:56 ```[4]``` does not vote for 1 at term[10], because candidateTerm = 10 || rf.votedFor == 2
+2022/07/15 22:36:56 ---[0]--- become Candidate with term[10]
+2022/07/15 22:36:56 ```[0]``` does not vote for 2 at term[10], because candidateTerm = 10 || rf.votedFor == 0
+2022/07/15 22:36:56 ```[1]``` does not vote for 2 at term[10], because candidateTerm = 10 || rf.votedFor == 1
+2022/07/15 22:36:56 ```[2]``` does not vote for 1 at term[10], because candidateTerm = 10 || rf.votedFor == 2
+2022/07/15 22:36:56 ```[0]``` does not vote for 1 at term[10], because candidateTerm = 10 || rf.votedFor == 0
+2022/07/15 22:36:56 ```[4]``` does not vote for 0 at term[10], because candidateTerm = 10 || rf.votedFor == 2
+2022/07/15 22:36:56 ```[1]``` does not vote for 0 at term[10], because candidateTerm = 10 || rf.votedFor == 1
+2022/07/15 22:36:56 ```[2]``` does not vote for 0 at term[10], because candidateTerm = 10 || rf.votedFor == 2
+2022/07/15 22:36:56 ---[5]--- become Candidate with term[9]
+2022/07/15 22:36:56 ---[4]--- become Candidate with term[11]
+2022/07/15 22:36:56 ---[2]--- vote for 4 at term[11]
+2022/07/15 22:36:56 ---[1]--- vote for 4 at term[11]
+2022/07/15 22:36:56 ---[2]--- become Candidate with term[12]
+2022/07/15 22:36:56 ---[1]--- vote for 2 at term[12]
+2022/07/15 22:36:56 ---[0]--- vote for 4 at term[11]
+2022/07/15 22:36:56 ---[4]--- vote for 2 at term[12]
+2022/07/15 22:36:56 ---[0]--- vote for 2 at term[12]
+2022/07/15 22:36:56 ***[4]*** receive 4 vote from all 4 at term[11]
+2022/07/15 22:36:56 ***[2]*** receive 4 vote from all 4 at term[12]
+2022/07/15 22:36:56 ---[5]--- become Candidate with term[10]
+2022/07/15 22:36:57 ---[4]--- become Candidate with term[13]
+2022/07/15 22:36:57 ---[1]--- vote for 4 at term[13]
+2022/07/15 22:36:57 ---[1]--- become Candidate with term[14]
+2022/07/15 22:36:57 ---[2]--- vote for 4 at term[13]
+2022/07/15 22:36:57 ---[0]--- vote for 4 at term[13]
+2022/07/15 22:36:57 ---[0]--- vote for 1 at term[14]
+2022/07/15 22:36:57 ---[4]--- vote for 1 at term[14]
+2022/07/15 22:36:57 ***[4]*** receive 4 vote from all 4 at term[13]
+2022/07/15 22:36:57 ---[2]--- vote for 1 at term[14]
+2022/07/15 22:36:57 ***[1]*** receive 4 vote from all 4 at term[14]
+2022/07/15 22:36:57 ---[5]--- become Candidate with term[11]
+2022/07/15 22:36:57 ---[1]--- become Candidate with term[15]
+2022/07/15 22:36:57 ---[0]--- vote for 1 at term[15]
+2022/07/15 22:36:57 ---[4]--- vote for 1 at term[15]
+2022/07/15 22:36:57 ---[2]--- vote for 1 at term[15]
+2022/07/15 22:36:57 ---[2]--- become Candidate with term[16]
+2022/07/15 22:36:57 ***[1]*** receive 4 vote from all 4 at term[15]
+2022/07/15 22:36:57 ---[1]--- become Leader with term[15]
+2022/07/15 22:36:57 ---[4]--- vote for 2 at term[16]
+2022/07/15 22:36:57 ---[1]--- vote for 2 at term[16]
+2022/07/15 22:36:57 ^^^^^^^^^^^^Leader[1] Closed^^^^^^^^^^^^
+2022/07/15 22:36:57 ---[5]--- become Candidate with term[12]
+2022/07/15 22:36:57 ---[0]--- vote for 2 at term[16]
+2022/07/15 22:36:57 ***[2]*** receive 4 vote from all 4 at term[16]
+2022/07/15 22:36:57 ---[2]--- become Candidate with term[17]
+2022/07/15 22:36:57 ---[4]--- vote for 2 at term[17]
+2022/07/15 22:36:57 ---[0]--- vote for 2 at term[17]
+2022/07/15 22:36:57 ---[1]--- vote for 2 at term[17]
+2022/07/15 22:36:57 ***[2]*** receive 4 vote from all 4 at term[17]
+2022/07/15 22:36:57 ---[2]--- become Leader with term[17]
+2022/07/15 22:36:57 ---[5]--- become Candidate with term[13]
+2022/07/15 22:36:58 ---[4]--- become Candidate with term[18]
+2022/07/15 22:36:58 ---[4]--- become Candidate with term[19]
+2022/07/15 22:36:58 ---[6]--- vote for 4 at term[19]
+2022/07/15 22:36:58 ---[3]--- vote for 4 at term[19]
+2022/07/15 22:36:58 ---[1]--- vote for 4 at term[19]
+2022/07/15 22:36:58 ***[4]*** receive 4 vote from all 4 at term[19]
+2022/07/15 22:36:58 ---[0]--- vote for 4 at term[19]
+2022/07/15 22:36:58 ---[4]--- become Leader with term[19]
+2022/07/15 22:36:59 ---[5]--- become Candidate with term[18]
+2022/07/15 22:36:59 ---[1]--- become Candidate with term[20]
+2022/07/15 22:36:59 ---[3]--- vote for 1 at term[20]
+2022/07/15 22:36:59 ---[5]--- vote for 1 at term[20]
+2022/07/15 22:36:59 ---[4]--- vote for 1 at term[20]
+2022/07/15 22:36:59 ---[0]--- vote for 1 at term[20]
+2022/07/15 22:36:59 ***[1]*** receive 4 vote from all 4 at term[20]
+2022/07/15 22:36:59 ---[1]--- become Leader with term[20]
+2022/07/15 22:36:59 ^^^^^^^^^^^^Leader[4] Closed^^^^^^^^^^^^
+2022/07/15 22:36:59 ^^^^^^^^^^^^Leader[1] Closed^^^^^^^^^^^^
+2022/07/15 22:36:59 ---[6]--- become Candidate with term[20]
+2022/07/15 22:36:59 ---[1]--- become Candidate with term[21]
+2022/07/15 22:36:59 ---[3]--- vote for 1 at term[21]
+2022/07/15 22:36:59 ---[0]--- vote for 1 at term[21]
+2022/07/15 22:36:59 ---[0]--- become Candidate with term[22]
+2022/07/15 22:36:59 ---[5]--- vote for 1 at term[21]
+2022/07/15 22:36:59 ---[4]--- vote for 1 at term[21]
+2022/07/15 22:36:59 ***[1]*** receive 4 vote from all 4 at term[21]
+2022/07/15 22:36:59 ---[1]--- become Leader with term[21]
+2022/07/15 22:36:59 ---[3]--- vote for 0 at term[22]
+2022/07/15 22:36:59 ---[4]--- vote for 0 at term[22]
+2022/07/15 22:36:59 ---[1]--- vote for 0 at term[22]
+2022/07/15 22:36:59 ---[5]--- vote for 0 at term[22]
+2022/07/15 22:36:59 ***[0]*** receive 4 vote from all 4 at term[22]
+2022/07/15 22:36:59 ^^^^^^^^^^^^Leader[1] Closed^^^^^^^^^^^^
+2022/07/15 22:37:00 ---[0]--- become Candidate with term[23]
+2022/07/15 22:37:00 ---[4]--- vote for 0 at term[23]
+2022/07/15 22:37:00 ---[5]--- vote for 0 at term[23]
+2022/07/15 22:37:00 ---[3]--- vote for 0 at term[23]
+2022/07/15 22:37:00 ---[1]--- vote for 0 at term[23]
+2022/07/15 22:37:00 ***[0]*** receive 4 vote from all 4 at term[23]
+2022/07/15 22:37:00 ---[6]--- become Candidate with term[21]
+2022/07/15 22:37:00 ---[0]--- become Leader with term[23]
+2022/07/15 22:37:00 ^^^^^^^^^^^^Leader[2] Closed^^^^^^^^^^^^
+2022/07/15 22:37:00 ---[3]--- become Candidate with term[24]
+2022/07/15 22:37:00 ---[5]--- become Candidate with term[24]
+2022/07/15 22:37:00 ---[1]--- become Candidate with term[24]
+2022/07/15 22:37:00 ---[1]--- become Candidate with term[25]
+2022/07/15 22:37:01 ---[5]--- become Candidate with term[25]
+2022/07/15 22:37:01 ---[2]--- vote for 5 at term[25]
+2022/07/15 22:37:01 ---[6]--- vote for 5 at term[25]
+2022/07/15 22:37:01 ---[3]--- vote for 5 at term[25]
+2022/07/15 22:37:01 ***[5]*** receive 4 vote from all 4 at term[25]
+2022/07/15 22:37:01 ---[5]--- become Leader with term[25]
+2022/07/15 22:37:01 ---[4]--- become Candidate with term[24]
+2022/07/15 22:37:01 ---[1]--- become Candidate with term[26]
+2022/07/15 22:37:01 ^^^^^^^^^^^^Leader[0] Closed^^^^^^^^^^^^
+  ... Passed --   9.6  7  912  158290    0
+2022/07/15 22:37:02 +++[2]+++ be killed
+2022/07/15 22:37:02 +++[1]+++ be killed
+2022/07/15 22:37:02 +++[4]+++ be killed
+2022/07/15 22:37:02 +++[6]+++ be killed
+PASS
+2022/07/15 22:37:02 +++[5]+++ be killed
+2022/07/15 22:37:02 ^^^^^^^^^^^^Leader[5] Closed^^^^^^^^^^^^
+ok  	6.824/raft	18.347s
