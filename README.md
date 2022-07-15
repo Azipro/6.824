@@ -6,9 +6,9 @@ MIT lesson
 
 ## Source Codes
 
--   [√] [Lab 1: MapReduce](src/mr/)
+-   [x] [Lab 1: MapReduce](src/mr/)
 -   [ ] [Lab 2: Replication for fault-tolerance using Raft](src/raft/)
-    -   [√] [Lab 2A: Leader Election]
+    -   [x] [Lab 2A: Leader Election]
     -   [ ] [Lab 2B: Log]
     -   [ ] [Lab 2C: Persistence]
     -   [ ] [Lab 2D: Log Compaction]
